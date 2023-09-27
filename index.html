@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayobami's project YelpCamp</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+
+  <!-- used hide and seek method here -->
+    <div class="h-screen">
+      
+      <div class="w-full h-fit p-5  md:block lg:hidden">
+        <img class=" hover:animate-bounce" src="Assets/Logo.svg"  alt="Logo"/>
+      </div>
+      <div class="grid h-screen md:h-screen lg:h-screen grid-flow-row md:grid-flow-row lg:grid-cols-[1.5fr,_1fr]">
+        <div class="grid grid-cols-1 grid-flow-row lg:grid-rows-[_1fr_7fr] lg:items-center px-10 md:px-20 lg:px-40">
+          <div class="w-fit h-fit pt-10 hidden md:hidden lg:block items-start lg:justify-start">
+            <img class=" hover:animate-bounce" src="Assets/Logo.svg"  alt="Logo"/>
+          </div>
+          <div class="flex flex-col  gap-5">
+            <h1 class="font-bold text-2xl md:text-3xl lg:text-5xl">Explore the best camps on Earth.</h1>
+            <p class="">
+              YelpCamp is a curated list of the best camping spots on Earth.
+              Unfiltered and Unbiased reviews
+            </p>
+
+
+            <ul class="flex flex-col list-inside">
+              <li class="flex items-center">
+                <img src="Assets/Checkmark.svg" alt="Checkmark icon" class="w-4 h-4 mr-2" /> Add your own camp suggestions.
+              </li>
+              <li class="flex items-center">
+                <img src="Assets/Checkmark.svg" alt="Checkmark icon" class="w-4 h-4 mr-2" /> Leave reviews and experiences.
+              </li>
+              <li class="flex items-center">
+                <img src="Assets/Checkmark.svg" alt="Checkmark icon" class="w-4 h-4 mr-2" /> See locations for all camps.
+              </li>
+            </ul>
+            
+    
+            <button class="bg-black text-white text-sm font-medium w-44 h-12 rounded"><a href="searchPage.html">View Campgrounds</a></button>
+            <p>Partnered with:</p>
+            
+            <div class="grid grid-cols-3 items-center w-38">
+              <img src="Assets/Airbnb.svg" alt="Airbnb"/>
+              <img src="Assets/Booking.svg" alt="Booking"/>
+              <img src="Assets/Plum Guide.svg" alt="Plum guide"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="h-fit md:h-fit lg:h-screen  order-first md:order-first lg:order-last">
+          <img class="h-3/5 w-full lg:h-screen" src="Assets/Hero Image.jpg"  alt="Hero image"/>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

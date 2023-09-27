@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preload" href="page2.js" as="script">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="flex sticky top-0 bg-white justify-between items-center w-4/5 mx-auto py-10">
+        <div class="flex justify-between lg:w-1/6">
+            <img class=" hover:animate-bounce" src="Assets/Logo.svg"  alt="Logo"/>
+            <a href="index.html">
+                <span class="hidden md:hidden lg:inline">Home</span>
+            </a>
+            <!-- <span class="hidden md:hidden lg:inline"><a href="searchPage.html">Home</a></span> -->
+        </div>
+        <div class="flex justify-between items-center w-fit  md:w-fit lg:w-1/5">
+            <span class="hidden md:hidden lg:inline"><a href="forms.html">Login</a></span>
+            <button class=" bg-black hidden md:hidden lg:inline lg:w-[75%] text-white p-3 rounded"><a href="forms.html">Create an account</a></button>
+            <span class="inline md:inline lg:hidden">
+                <img id="Menu-btn" src="Assets/Hamburger Menu.svg" alt="Hamburger menu" class="animate-ping">
+            </span>
+        </div>
+    </nav>
+
+    <ul id="show-menu" class="absolute right-5 transition-transform translate-y-6 duration-75 ease-in-ease-out hidden grid grid-cols-1 gap-2 p-10 justify-end bg-black text-white sm:w-full md:w-2/5">
+        <img id="close-btn" src="Assets/Close.svg" alt="close button" class="p-4 bg-red-700 justify-end hover:text-black hover:bg-red">
+        <li class="p-4 text-slate-100 hover:bg-slate-100 hover:text-black">Home</li>
+        <li class="p-4 text-slate-100 hover:bg-slate-100 hover:text-black">Login</li>
+        <button class=" bg-slate-100 w-full text-black p-3 rounded">Create an account</button>
+    </ul>
+
+    <div class="w-4/5 mx-auto flex flex-col gap-3 md:flex-col md:gap-5 lg:flex-row justify-around">
+        <div id="mapContainer" class=" w-full order-2 md:2/3 md:order-2 lg:w-1/3 lg:order-2">
+            <!-- Embed an Earth map here -->
+            <img src="images/Map.png" alt="map" class="border-2 border-solid p-10 w-full" lazy="loading">
+        </div>
+        <div class="grid grid-flow-row gap-3 md:gap-5 lg:gap-10 w-full order-1 md:w-full md:order-1 lg:w-1/2 lg:order-2">
+            <div id="detailsContainer" class="p-5 border-2 border-solid rounded items-center w-full">
+                <!-- Detailed campground information will be displayed here -->
+            </div>
+            <div id="feedbackContainer" class="p-10 border-2 border-solid rounded items-center w-full">
+                <!-- Customer feedbacks go here -->
+            </div>
+        </div>
+    </div>
+    <div id="popupContainer" class="popup">
+        <div class="popup-content">
+            <span class="close-button" id="closePopupButton">&times;</span>
+            <div class="flex flex-col">
+                <input class="input p-2 mb-5 border-b-2 w-3/4 md:w-38 " placeholder="&#xF002; Name of Reviewer" style="font-family:Arial, FontAwesome" type="text" id="nameOfReviewer"/>
+                <input class="input p-2 mb-5 border-b-2 w-3/4 md:w-38 " type="text" placeholder="&#xF002; Description" style="font-family:Arial, FontAwesome" id="description">
+                <button id="addReview" type="button" class="bg-black text-white rounded p-3">Review</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="page2.js" async></script>
+    <script src="search.js" async></script>
+    
+</body>
+</html>
